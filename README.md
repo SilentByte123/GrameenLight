@@ -48,8 +48,6 @@ app/src/main/java/com/grameenlight/app
 
 Open this folder in Android Studio:
 
-`C:\Users\Jyoti\AndroidStudioProjects\GrameenLight`
-
 ## Build
 
 ```powershell
