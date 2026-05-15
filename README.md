@@ -124,18 +124,21 @@ Build verification:
 
 The app works without Firebase in **local offline-first mode**.
 
-This repository now includes the Android Firebase configuration needed for the demo build.
-
 To enable Firestore sync:
 
-1. Clone the repository
-2. Open it in Android Studio
-3. Build and run the app
-4. Firestore sync should work with the included demo configuration
+1. Create your Firebase project
+2. Add an Android app with package name `com.grameenlight.app`
+3. Download `google-services.json`
+4. Place it in:
+
+   `app/google-services.json`
+
+5. Create Firestore and publish valid rules
+6. Rebuild and run the app
 
 ### Important Note
 
-If Firestore rules or project configuration are changed in Firebase Console later, online sync behavior may change. The local Room Database flow will continue to work.
+`google-services.json` is intentionally **not committed** to this repository. Without that file, the app still works locally using Room Database, but real cloud sync will not activate.
 
 Detailed setup steps:
 
