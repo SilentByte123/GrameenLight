@@ -64,25 +64,25 @@ Room is the **local source of truth**. Firebase Firestore acts as the **remote s
 
 ```text
 GrameenLight/
-├─ app/
-│  ├─ src/main/java/com/grameenlight/app/
-│  │  ├─ data/
-│  │  │  ├─ local/
-│  │  │  ├─ model/
-│  │  │  └─ repository/
-│  │  ├─ ui/
-│  │  │  ├─ screens/
-│  │  │  ├─ theme/
-│  │  │  └─ viewmodel/
-│  │  ├─ AppContainer.kt
-│  │  ├─ AppSyncManager.kt
-│  │  ├─ GrameenLightApplication.kt
-│  │  └─ MainActivity.kt
-│  └─ build.gradle.kts
-├─ gradle/
-├─ build.gradle.kts
-├─ settings.gradle.kts
-└─ README.md
+|-- app/
+|   |-- src/main/java/com/grameenlight/app/
+|   |   |-- data/
+|   |   |   |-- local/
+|   |   |   |-- model/
+|   |   |   `-- repository/
+|   |   |-- ui/
+|   |   |   |-- screens/
+|   |   |   |-- theme/
+|   |   |   `-- viewmodel/
+|   |   |-- AppContainer.kt
+|   |   |-- AppSyncManager.kt
+|   |   |-- GrameenLightApplication.kt
+|   |   `-- MainActivity.kt
+|   `-- build.gradle.kts
+|-- gradle/
+|-- build.gradle.kts
+|-- settings.gradle.kts
+`-- README.md
 ```
 
 ## Setup Requirements
@@ -116,6 +116,10 @@ Debug APK output:
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
+Build verification:
+
+- `.\gradlew.bat :app:assembleDebug` completed successfully
+
 ## Firebase Setup
 
 The app works without Firebase in **local offline-first mode**.
@@ -146,7 +150,7 @@ Detailed setup steps:
 - Complaint IDs are generated automatically
 - Offline reports are saved locally first
 - Energy is calculated for fixed `Burning in Day` complaints only
-- Approximate INR saved uses a demo assumption of `₹8 per kWh`
+- Approximate INR saved uses a demo assumption of `INR 8 per kWh`
 
 ## Application Screenshots
 
