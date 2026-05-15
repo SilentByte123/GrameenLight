@@ -136,6 +136,10 @@ To enable Firestore sync:
 
 `google-services.json` is intentionally **not committed** to this repository. Without that file, the app still works locally using Room Database, but real cloud sync will not activate.
 
+Detailed setup steps:
+
+- [Firebase Setup Guide](docs/FIREBASE_SETUP.md)
+
 ## Demo Notes
 
 - Default Panchayat demo PIN: `1234`
@@ -182,6 +186,11 @@ To enable Firestore sync:
 4. Track the complaint from the Repair Tracker screen
 5. Use Panchayat Mode to assign or fix complaints
 6. View monthly impact from the Energy Saved screen
+
+## Additional Documentation
+
+- [Project Flow](docs/PROJECT_FLOW.md)
+- [Firebase Setup Guide](docs/FIREBASE_SETUP.md)
 
 ## Future Improvements
 
