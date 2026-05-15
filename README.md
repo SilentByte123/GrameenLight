@@ -164,15 +164,15 @@ Detailed setup steps:
 
 ### Repair Tracker
 
-![Repair Tracker](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/repair-tracker.jpeg)
+![Repair Tracker](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/ReportTracker.jpeg)
 
 ### Panchayat Mode
 
-![Panchayat Mode](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/panchayat-mode.jpeg)
+![Panchayat Mode](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/PanchayatMode.jpeg)
 
 ### Energy Saved
 
-![Energy Saved](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/energy-saved.jpeg)
+![Energy Saved](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/EnergySaved.jpeg)
 
 ### Settings - Dark Theme
 
@@ -180,11 +180,11 @@ Detailed setup steps:
 
 ### Settings - Light Theme
 
-![Settings Light](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/settings-light.jpeg)
+![Settings Light](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/Settings.jpeg)
 
 ### GenAI Summary
 
-![GenAI Summary](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/genai-summary.jpeg)
+![GenAI Summary](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/GenaiSummary.jpeg)
 
 ## Basic Usage Flow
 
