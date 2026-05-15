@@ -677,7 +677,7 @@ private fun PanchayatScreen(
                     title = "GenAI summary",
                     summary = summary,
                     accentColor = infoBannerColor(),
-                    footer = if (firebaseReady) "Verified sync active" else "Offline fallback active",
+                    footer = if (firebaseReady) "Realtime sync active" else "Offline fallback active",
                     actionLabel = "Summarise today",
                     onAction = onSummarize
                 )
