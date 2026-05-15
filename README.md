@@ -144,6 +144,45 @@ To enable Firestore sync:
 - Energy is calculated for fixed `Burning in Day` complaints only
 - Approximate INR saved uses a demo assumption of `₹8 per kWh`
 
+## Application Screenshots
+
+### Pole Map
+
+![Pole Map](docs/screenshots/pole-map.jpeg)
+
+### Repair Tracker
+
+![Repair Tracker](docs/screenshots/repair-tracker.jpeg)
+
+### Panchayat Mode
+
+![Panchayat Mode](docs/screenshots/panchayat-mode.jpeg)
+
+### Energy Saved
+
+![Energy Saved](docs/screenshots/energy-saved.jpeg)
+
+### Settings - Light Theme
+
+![Settings Light](docs/screenshots/settings-light.jpeg)
+
+### Settings - Night Theme
+
+![Settings Night](docs/screenshots/settings-night.jpeg)
+
+### GenAI Summary
+
+![GenAI Summary](docs/screenshots/genai-summary.jpeg)
+
+## Basic Usage Flow
+
+1. Open the app to view the Pole Map
+2. Select a pole to inspect its current status
+3. Submit a Quick Report using `Working`, `Fused`, or `Burning in Day`
+4. Track the complaint from the Repair Tracker screen
+5. Use Panchayat Mode to assign or fix complaints
+6. View monthly impact from the Energy Saved screen
+
 ## Future Improvements
 
 - Real authentication for admin users
