@@ -4,24 +4,15 @@
 
 Firebase Firestore is used as the remote sync layer for Grameen-Light. The application still works locally without Firebase because Room Database is used for offline-first storage.
 
-## Required Steps
+## Current Repository Setup
 
-1. Create a Firebase project
-2. Add an Android app with package name:
+This repository includes the Android Firebase configuration file used for the demo build:
 
-   `com.grameenlight.app`
+- `app/google-services.json`
 
-3. Download `google-services.json`
-4. Place the file in:
-
-   `app/google-services.json`
-
-5. Enable Firestore Database
-6. Configure valid Firestore rules
-7. Rebuild the Android project
+With the current Firebase project and rules, a fresh clone should be able to build and use Firestore sync directly.
 
 ## Important Notes
 
-- `google-services.json` is not committed to GitHub
-- Without Firebase configuration, the app continues to work with Room-only local storage
+- The app still supports Room-only local storage if Firebase becomes unavailable
 - Sync states such as `Pending`, `Synced`, and `Failed` depend on actual Firebase availability
