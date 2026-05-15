@@ -158,6 +158,10 @@ Detailed setup steps:
 
 ![Pole Map](docs/screenshots/pole-map.jpeg)
 
+### Quick Report
+
+![Quick Report](docs/screenshots/quick-report.jpeg)
+
 ### Repair Tracker
 
 ![Repair Tracker](docs/screenshots/repair-tracker.jpeg)
@@ -170,13 +174,13 @@ Detailed setup steps:
 
 ![Energy Saved](docs/screenshots/energy-saved.jpeg)
 
+### Settings - Dark Theme
+
+![Settings Dark](docs/screenshots/settings-dark.jpeg)
+
 ### Settings - Light Theme
 
 ![Settings Light](docs/screenshots/settings-light.jpeg)
-
-### Settings - Night Theme
-
-![Settings Night](docs/screenshots/settings-night.jpeg)
 
 ### GenAI Summary
 
