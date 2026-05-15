@@ -1,72 +1,154 @@
-# Grameen-Light
+# Grameen-Light (Energy)
 
-Grameen-Light (Energy) is an Android app for village streetlight issue reporting and repair tracking. Residents can report pole issues quickly, while Panchayat users can assign and close repairs through a PIN-protected workflow.
+Grameen-Light (Energy) is an Android application for village streetlight issue reporting and repair tracking. It is designed for two user groups:
 
-## Features
+- **Residents**, who report streetlight conditions quickly
+- **Panchayat admin users**, who assign, fix, and close complaints
+
+The project is built as an **offline-first** Android app. Complaint data is saved locally in **Room Database** first, and then synced to **Firebase Firestore** when internet and Firebase configuration are available.
+
+## Problem Statement
+
+Streetlight complaints in villages are often handled manually through calls, verbal communication, or notebooks. This creates problems such as:
+
+- no clear complaint tracking
+- difficulty identifying which pole has an issue
+- delays in assigning and closing repair work
+- poor visibility into daytime-burning lamps and energy waste
+
+Grameen-Light addresses this by providing a simple Android app for reporting, tracking, and energy-impact monitoring.
+
+## Core Features
 
 - Pole map with 25 seeded streetlight poles
-- Quick report flow for `Working`, `Fused`, and `Burning in Day`
+- Status-based poles: `Working`, `Fused`, `Burning in Day`, `Assigned`, `Unknown`
+- Quick report flow with minimal input
 - Complaint ID generation in `GL-YYYYMMDD-NNN` format
-- Repair tracker with status filters and update history
-- Panchayat mode with 4-digit PIN protection
-- Energy-saved summary for resolved daytime-burning issues
-- Day audit / night audit theme switching
-- Offline-first Room storage with Firebase-ready sync
-- Fallback Panchayat summary when AI/cloud is unavailable
+- Repair tracker with `Open`, `Assigned`, `Fixed`, and `Pole ID` filters
+- Panchayat mode protected by a 4-digit PIN
+- Energy saved summary for fixed daytime-burning complaints
+- Day audit / night audit theme switching with persistence
+- Offline-first Room storage
+- Firebase-ready real-time sync with `Pending`, `Synced`, and `Failed` states
+- Fallback Panchayat summary when live AI is unavailable
 
 ## Tech Stack
 
 - Kotlin
+- Android Studio
 - Jetpack Compose
-- MVVM
+- Material Design 3
+- MVVM Architecture
 - Room Database
 - Firebase Firestore
-- StateFlow
-- Material Design 3
+- Kotlin StateFlow
 
-## Architecture
+## Architecture and Data Flow
 
-Data flow is kept strict:
+The project follows strict MVVM layering:
 
-`UI -> ViewModel -> Repository -> DAO -> Room`
+`UI -> ViewModel -> Repository -> DAO -> Room Database`
 
-Room is the local source of truth. Firebase Firestore is used as a remote sync layer when configuration and internet are available.
+Room is the **local source of truth**. Firebase Firestore acts as the **remote sync layer**.
+
+### Request Flow
+
+1. User interacts with the Compose UI
+2. UI sends events to a ViewModel
+3. ViewModel delegates logic to a Repository
+4. Repository reads or writes through DAO interfaces
+5. DAO updates Room Database locally
+6. Repository attempts Firebase sync when possible
 
 ## Project Structure
 
 ```text
-app/src/main/java/com/grameenlight/app
-|- data/local
-|- data/model
-|- data/repository
-|- ui/screens
-|- ui/theme
-|- ui/viewmodel
+GrameenLight/
+├─ app/
+│  ├─ src/main/java/com/grameenlight/app/
+│  │  ├─ data/
+│  │  │  ├─ local/
+│  │  │  ├─ model/
+│  │  │  └─ repository/
+│  │  ├─ ui/
+│  │  │  ├─ screens/
+│  │  │  ├─ theme/
+│  │  │  └─ viewmodel/
+│  │  ├─ AppContainer.kt
+│  │  ├─ AppSyncManager.kt
+│  │  ├─ GrameenLightApplication.kt
+│  │  └─ MainActivity.kt
+│  └─ build.gradle.kts
+├─ gradle/
+├─ build.gradle.kts
+├─ settings.gradle.kts
+└─ README.md
 ```
 
-## Open in Android Studio
+## Setup Requirements
 
-Open this folder in Android Studio:
+- Windows with Android Studio installed
+- Android SDK for API 28 or above
+- Java toolchain supported by the Android Gradle Plugin in the project
+- Android emulator or physical Android device
 
-## Build
+## Open and Run in Android Studio
+
+1. Open Android Studio
+2. Select **Open**
+3. Choose the project folder:
+
+   `C:\Users\Jyoti\AndroidStudioProjects\GrameenLight`
+
+4. Let Gradle sync finish
+5. Connect a device or start an emulator
+6. Run the `app` configuration
+
+## Build from Command Line
 
 ```powershell
 .\gradlew.bat :app:assembleDebug
 ```
 
+Debug APK output:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
 ## Firebase Setup
 
-The project works offline without Firebase.
+The app works without Firebase in **local offline-first mode**.
 
-To enable cloud sync:
+To enable Firestore sync:
 
-1. Create a Firebase project
-2. Download `google-services.json`
-3. Place it in `app/google-services.json`
-4. Rebuild the app
+1. Create your Firebase project
+2. Add an Android app with package name `com.grameenlight.app`
+3. Download `google-services.json`
+4. Place it in:
+
+   `app/google-services.json`
+
+5. Create Firestore and publish valid rules
+6. Rebuild and run the app
+
+### Important Note
+
+`google-services.json` is intentionally **not committed** to this repository. Without that file, the app still works locally using Room Database, but real cloud sync will not activate.
 
 ## Demo Notes
 
-- Panchayat demo PIN default: `1234`
-- Android version target: API 28+
-- Offline reports save locally first and sync later when possible
+- Default Panchayat demo PIN: `1234`
+- Complaint IDs are generated automatically
+- Offline reports are saved locally first
+- Energy is calculated for fixed `Burning in Day` complaints only
+- Approximate INR saved uses a demo assumption of `₹8 per kWh`
+
+## Future Improvements
+
+- Real authentication for admin users
+- GPS-based live pole location
+- WorkManager-based background sync retry
+- Production Firebase rules
+- Analytics and usage reporting
+- Village-level scaling with live field data
