@@ -156,35 +156,35 @@ Detailed setup steps:
 
 ### Pole Map
 
-![Pole Map](docs/screenshots/pole-map.jpeg)
+![Pole Map](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/pole-map.jpeg)
 
 ### Quick Report
 
-![Quick Report](docs/screenshots/quick-report.jpeg)
+![Quick Report](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/quick-report.jpeg)
+
+### Repair Tracker
+
+![Repair Tracker](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/repair-tracker.jpeg)
 
 ### Panchayat Mode
 
-![Panchayat Mode](docs/screenshots/repair-tracker.jpeg)
-
-###Settings
-
-![Settings](docs/screenshots/panchayat-mode.jpeg)
+![Panchayat Mode](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/panchayat-mode.jpeg)
 
 ### Energy Saved
 
-![Energy Saved](docs/screenshots/energy-saved.jpeg)
+![Energy Saved](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/energy-saved.jpeg)
 
 ### Settings - Dark Theme
 
-![Settings Dark](docs/screenshots/settings-dark.jpeg)
+![Settings Dark](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/settings-dark.jpeg)
 
 ### Settings - Light Theme
 
-![Settings Light](docs/screenshots/settings-light.jpeg)
+![Settings Light](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/settings-light.jpeg)
 
 ### GenAI Summary
 
-![GenAI Summary](docs/screenshots/genai-summary.jpeg)
+![GenAI Summary](https://raw.githubusercontent.com/SilentByte123/GrameenLight/main/docs/screenshots/genai-summary.jpeg)
 
 ## Basic Usage Flow
 
