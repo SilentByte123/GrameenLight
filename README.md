@@ -162,13 +162,13 @@ Detailed setup steps:
 
 ![Quick Report](docs/screenshots/quick-report.jpeg)
 
-### Repair Tracker
-
-![Repair Tracker](docs/screenshots/repair-tracker.jpeg)
-
 ### Panchayat Mode
 
-![Panchayat Mode](docs/screenshots/panchayat-mode.jpeg)
+![Panchayat Mode](docs/screenshots/repair-tracker.jpeg)
+
+###Settings
+
+![Settings](docs/screenshots/panchayat-mode.jpeg)
 
 ### Energy Saved
 
